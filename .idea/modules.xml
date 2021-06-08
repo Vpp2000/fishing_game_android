@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fish-game-main.iml" filepath="$PROJECT_DIR$/.idea/modules/fish-game-main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/fish-game-main.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/fish-game-main.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fishing_game_android.iml" filepath="$PROJECT_DIR$/.idea/modules/fishing_game_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/fishing_game_android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/fishing_game_android.app.iml" />
     </modules>
   </component>
 </project>

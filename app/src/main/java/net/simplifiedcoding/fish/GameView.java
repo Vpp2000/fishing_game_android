@@ -71,6 +71,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     final MediaPlayer gameOversound;
 
+    static MediaPlayer areYouWinningSon;
 
     public GameView(Context context, int _screenX, int _screenY) {
         super(context);
@@ -127,6 +128,7 @@ public class GameView extends SurfaceView implements Runnable {
         gameOnsound = MediaPlayer.create(context,R.raw.gameon);
         killedEnemysound = MediaPlayer.create(context,R.raw.killedenemy);
         gameOversound = MediaPlayer.create(context,R.raw.gameover);
+        areYouWinningSon = MediaPlayer.create(context, R.raw.apex_legends_music);
 
         //starting the music to be played across the game
         gameOnsound.start();
@@ -316,7 +318,10 @@ public class GameView extends SurfaceView implements Runnable {
 
                 int yPos=(int) ((canvas.getHeight() / 2) - ((paint.descent() + paint.ascent()) / 2));
                 //canvas.drawText("Game Over",canvas.getWidth()/2,yPos,paint);
-                if (youWon) canvas.drawBitmap(you_win_title,(canvas.getWidth()/2)-you_win_title.getWidth()/2,yPos-you_win_title.getHeight()/2,paint);
+                if (youWon){
+                    areYouWinningSon.start();
+                    canvas.drawBitmap(you_win_title,(canvas.getWidth()/2)-you_win_title.getWidth()/2,yPos-you_win_title.getHeight()/2,paint);
+                }
                 else canvas.drawBitmap(gameover_title,(canvas.getWidth()/2)-gameover_title.getWidth()/2,yPos-gameover_title.getHeight()/2,paint);
             }
 
