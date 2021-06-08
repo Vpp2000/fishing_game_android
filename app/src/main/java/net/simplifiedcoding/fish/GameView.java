@@ -88,9 +88,9 @@ public class GameView extends SurfaceView implements Runnable {
 
         backgroundsLevel = new Bitmap[4];
         backgroundsLevel[0] = BitmapFactory.decodeResource(context.getResources(), R.drawable.background);
-        backgroundsLevel[1] = BitmapFactory.decodeResource(context.getResources(), R.drawable.fondo_opt);
-        backgroundsLevel[2] = BitmapFactory.decodeResource(context.getResources(), R.drawable.background);
-        backgroundsLevel[3] = BitmapFactory.decodeResource(context.getResources(), R.drawable.fondo_opt);
+        backgroundsLevel[1] = BitmapFactory.decodeResource(context.getResources(), R.drawable.background2);
+        backgroundsLevel[2] = BitmapFactory.decodeResource(context.getResources(), R.drawable.background3);
+        backgroundsLevel[3] = BitmapFactory.decodeResource(context.getResources(), R.drawable.background2);
 
         //set background game
         background = backgroundsLevel[0];
@@ -202,7 +202,7 @@ public class GameView extends SurfaceView implements Runnable {
                 } else if (player.getHp() >= 500){
                     // Set next level
                     level += 1;
-                    if(level > MAX_LEVEL){   // aquí tu ya has ganado
+                    if(level > MAX_LEVEL){
                         youWon = true;
                         gameOver(); //change to Win player
                     }else {
@@ -296,7 +296,7 @@ public class GameView extends SurfaceView implements Runnable {
             }
 
             //drawing the score on the game screen
-            paint.setColor(Color.WHITE);
+            paint.setColor(Color.BLACK);
             paint.setTextSize(80);
             canvas.drawText("Level:"+level,100,60,paint);
             canvas.drawText("Score:"+score,100,115,paint);
